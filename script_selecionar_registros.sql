@@ -11,3 +11,6 @@ SELECT * FROM `db_sala_16`.`cidades` WHERE `nome` LIKE 'a%';
 
 -- todos os registro que comecem com qualquer letra/palavra e termine com a letra "a"
 SELECT * FROM `db_sala_16`.`cidades` WHERE `nome` LIKE '%a';
+
+-- mostra todos os nomes das cidades com seus respectivos nomes de estados, ordenados pelos nomes das cidades
+SELECT `cidades`.`nome`, `estados`.`nome` FROM `db_sala_16`.`estados` INNER JOIN `db_sala_16`.`cidades` ON `cidades`.`id_estado` = `estados`.`id` ORDER BY `cidades`.`nome`;
